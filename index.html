@@ -115,6 +115,27 @@
                 document.getElementById("startWebcamManuallyDiv").style.display = "none";
                 iTracker.VIDEO.play()
             }
+        document.addEventListener('touchstart', function (event) {
+            var touch = event.touches[0];
+            var touchPosition = {
+                x: touch.clientX,
+                y: touch.clientY
+            };
+            unityInstance.SendMessage('ObjectMover', 'OnTouchStart', JSON.stringify(touchPosition));
+        }, false);
+
+        document.addEventListener('touchmove', function (event) {
+            var touch = event.touches[0];
+            var touchPosition = {
+                x: touch.clientX,
+                y: touch.clientY
+            };
+            unityInstance.SendMessage('ObjectMover', 'OnTouchMove', JSON.stringify(touchPosition));
+        }, false);
+
+        document.addEventListener('touchend', function (event) {
+            unityInstance.SendMessage('ObjectMover', 'OnTouchEnd');
+        }, false);
 
     </script>
 </body>
