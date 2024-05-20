@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes'>
-    <title>Unity WebGL Player | 3D_Mov_Rot_scale</title>
+    <title>Unity WebGL Player | 3D_translate</title>
     <link rel="stylesheet" href="TemplateData/style.css">
     <style>
          html{
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <script src="Build/apk_3D_transform.loader.js"></script>
+    <script src="Build/apk_3D_translate.loader.js"></script>
     <script>
             var container = document.querySelector("#unity-container");
             var canvas = document.querySelector("#unity-canvas");
@@ -73,12 +73,12 @@
                 document.getElementById("startWebcamDiv").style.display = "none";
 
                 createUnityInstance(document.querySelector("#unity-canvas"), {
-                    dataUrl: "Build/apk_3D_transform.data",
-                    frameworkUrl: "Build/apk_3D_transform.framework.js",
-                    codeUrl: "Build/apk_3D_transform.wasm",
+                    dataUrl: "Build/apk_3D_translate.data",
+                    frameworkUrl: "Build/apk_3D_translate.framework.js",
+                    codeUrl: "Build/apk_3D_translate.wasm",
                     streamingAssetsUrl: "StreamingAssets",
                     companyName: "DefaultCompany",
-                    productName: "3D_Mov_Rot_scale",
+                    productName: "3D_translate",
                     productVersion: "0.1",
                     //webglContextAttributes: { "preserveDrawingBuffer": true },
                     // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
